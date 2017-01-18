@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource name="jdbc/rent_smart"
+		auth="Container" type="javax.sql.DataSource"
+		maxActive="20" maxIdle="5" maxWait="10000"
+		username="rentals" password="P@$$w0rd!"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/rent_smart"/>
+</Context>
