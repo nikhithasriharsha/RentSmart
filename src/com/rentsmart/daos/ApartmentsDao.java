@@ -77,7 +77,8 @@ public class ApartmentsDao {
 		apt.setId(resultSet.getInt("Id"));
 		apt.setStreet(resultSet.getString("Street"));
 		apt.setCity(resultSet.getString("City"));
-		apt.setStatecode(resultSet.getString("State"));
+		
+		apt.setExpectedRent(resultSet.getInt("Expected_Rent"));
 			
 		return apt;	
 	}
