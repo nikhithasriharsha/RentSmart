@@ -1,6 +1,7 @@
 package com.rentsmart.models;
 
 import java.util.Date;
+import java.util.List;
 
 public class Apartment {
 	private int id;

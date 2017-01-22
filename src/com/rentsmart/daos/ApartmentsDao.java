@@ -10,6 +10,7 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import com.rentsmart.models.Apartment;
+import com.rentsmart.models.Image;
 
 public class ApartmentsDao {
 	
@@ -51,13 +52,15 @@ public class ApartmentsDao {
 	public Apartment getbyId(int id) {
     	  
 		try{
-  			String query = "select * from Rent_Smart.Apartments, Rent_Smart.Apt_Images where Rent_Smart.Apartments.Id = Rent_Smart.Apt_Images.Apt_Id" ;
+  			String query = "select * from Apartments where Id =" +id ;
   			connection = dataSource.getConnection();
   			statement = connection.createStatement();
   			resultSet = statement.executeQuery(query);
   			
   			if(resultSet.next()) {
-  				return getApartmentFromResultSet( resultSet );
+  				Apartment apt = getApartmentFromResultSet(resultSet);
+  				
+  				return apt;
   				
   			}
   		}
@@ -79,5 +82,5 @@ public class ApartmentsDao {
 		return apt;	
 	}
 }
-
+        
 
