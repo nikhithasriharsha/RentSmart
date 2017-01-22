@@ -18,9 +18,9 @@ import com.rentsmart.models.Apartment;
 /**
  * Servlet implementation class HomeServlet
  */
-@WebServlet("/")
+@WebServlet("/home")
 public class HomeServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	
 	
 	@Resource(name = "jdbc/rent_smart")
 	private DataSource dataSource;
@@ -30,14 +30,7 @@ public class HomeServlet extends HttpServlet {
 	public void init() {
 		apartmentsDao = new ApartmentsDao(dataSource);
 	}
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public HomeServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -48,9 +41,12 @@ public class HomeServlet extends HttpServlet {
 		
         request.setAttribute("apartments", apartmentList);
 		
-		String nextJSP = "/apartmentsList.jsp";
+		String nextJSP = "/views/apartmentsList.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(request,response);
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
 
 }
