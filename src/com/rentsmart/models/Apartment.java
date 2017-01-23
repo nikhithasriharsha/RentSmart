@@ -15,6 +15,17 @@ public class Apartment {
 	private float numBaths;
 	private int sqft;
 	
+	
+	
+	private Image img;
+	
+	
+	public Image getImg() {
+		return img;
+	}
+	public void setImg(Image img) {
+		this.img = img;
+	}
 	private Date availableDate;
 	private int expectedRent;
 	private String description;

@@ -18,8 +18,8 @@ import com.rentsmart.models.Apartment;
 /**
  * Servlet implementation class HomeServlet
  */
-@WebServlet("/home")
-public class HomeServlet extends HttpServlet {
+@WebServlet("/search")
+public class SearchServlet extends HttpServlet {
 	
 	
 	@Resource(name = "jdbc/rent_smart")

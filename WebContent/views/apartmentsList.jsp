@@ -15,14 +15,11 @@
             <div class="row">
               <c:forEach items="${apartments}" var="apt" >
                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        
-                        <img src="assets/img/portfolio/cake.png" class="img-responsive" alt="">
+                    <a href="apartment?id=<c:out value="${apt.id}"/>" class="portfolio-link" data-toggle="modal">
+                        <img src="assets/img/apt/<c:out value="${apt.img.url}"/>" class="img-responsive" alt="">
                         <div class="row">
-                        
-                        
-                        <h4 class="col-md-9"><c:out value="${apt.street}"/></h4>
-                        <h4 class="text-right col-md-3">$<c:out value="${apt.expectedRent}"/></h4>
+	                        <h4 class="col-md-9"><c:out value="${apt.street}"/></h4>
+	                        <h4 class="text-right col-md-3">$<c:out value="${apt.expectedRent}"/></h4>
                         </div>
                         
                     </a>

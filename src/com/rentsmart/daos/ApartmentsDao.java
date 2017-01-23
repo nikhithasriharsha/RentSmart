@@ -30,7 +30,7 @@ public class ApartmentsDao {
 		List<Apartment> apartments = new ArrayList<Apartment>();
 		
 		try{
-			String query = "select * from Apartments";
+			String query = "SELECT * FROM Apartments apt join Apt_Images ai on ai.Img_Id = ( select img.Img_Id from Apt_Images img where img.Apt_Id = apt.Id limit 1);";
 			connection = dataSource.getConnection();
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery(query);
@@ -38,7 +38,10 @@ public class ApartmentsDao {
 			while(resultSet.next()){
 				
 				Apartment apt = getApartmentFromResultSet(resultSet);
+				Image img= new Image();
+				img.setUrl(resultSet.getString("Img_Url"));
 				
+				apt.setImg(img);
 				apartments.add(apt);	
 			}
 		}
@@ -79,7 +82,7 @@ public class ApartmentsDao {
 		apt.setCity(resultSet.getString("City"));
 		
 		apt.setExpectedRent(resultSet.getInt("Expected_Rent"));
-			
+		
 		return apt;	
 	}
 }

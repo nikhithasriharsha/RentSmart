@@ -3,7 +3,11 @@
 
 <% Apartment apt = (Apartment)request.getAttribute("apartmentDetails"); %>
 <jsp:include page="header.jsp" />
+    <section>
     
-	<%= apt.getCity() %> 
+    <%= apt.getCity() %>
+    
+    </section>
+	 
 	
 <jsp:include page="footer.jsp" />
