@@ -16,7 +16,6 @@ public class Apartment {
 	private int sqft;
 	
 	
-	
 	private Image img;
 	
 	

@@ -26,11 +26,14 @@ public class ApartmentsDao {
 		this.dataSource = ds;
 	}
 	
-	public List<Apartment> getApartments() {
+	public List<Apartment> getApartments(String address) {
 		List<Apartment> apartments = new ArrayList<Apartment>();
 		
 		try{
-			String query = "SELECT * FROM Apartments apt join Apt_Images ai on ai.Img_Id = ( select img.Img_Id from Apt_Images img where img.Apt_Id = apt.Id limit 1);";
+			String query = "SELECT * FROM Apartments apt join Apt_Images ai on ai.Img_Id = ( select img.Img_Id from Apt_Images img where img.Apt_Id = apt.Id limit 1)";
+			if(address != null) {
+				query += "where apt.city= '"+address+"'";
+			}
 			connection = dataSource.getConnection();
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery(query);

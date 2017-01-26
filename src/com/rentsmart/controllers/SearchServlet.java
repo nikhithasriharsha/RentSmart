@@ -36,7 +36,9 @@ public class SearchServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Apartment> apartmentList = apartmentsDao.getApartments();
+		String address = request.getParameter("address");
+		
+		List<Apartment> apartmentList = apartmentsDao.getApartments(address);
 		
 		
         request.setAttribute("apartments", apartmentList);
@@ -44,9 +46,6 @@ public class SearchServlet extends HttpServlet {
 		String nextJSP = "/views/apartmentsList.jsp";
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(request,response);
-	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
 
 }

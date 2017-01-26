@@ -7,7 +7,7 @@ public class Image {
 		return Id;
 	}
 	public void setId(int id) {
-		Id = id;
+		this.Id = id;
 	}
 	public String getUrl() {
 		return url;

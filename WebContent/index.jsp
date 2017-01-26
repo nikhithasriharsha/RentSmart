@@ -4,20 +4,35 @@
 
 <jsp:include page="views/header.jsp" />
 
-<header>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search for...">
-					<span class="input-group-btn">
-        				<button class="btn btn-default" type="button"><span class = "glyphicon glyphicon-search" ></span></button>
-      				</span>
-      			</div>
-     		</div>
- 		</div>
-	</div>
-</header>
 
+<!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <img class="img-responsive" src="assets/img/profile.png" alt=""> -->
+                    <div class="intro-text">
+                        <span class="name">Find Your Next Apartment</span>
+                        <hr class="star-light">
+                        <div class="row">
+							<div class="col-md-8 col-md-offset-2 hero-search">
+								<form method="get" action="search">
+								     <div class="input-group">
+										<input type="text" name="address" class="form-control" placeholder="Search by City or Zipcode....">
+										<span class="input-group-btn">
+					        				<button class="btn btn-default" type="submit"><span class = "glyphicon glyphicon-search" ></span></button>
+					      				</span>
+					      			</div>
+								</form>
+				     		</div>
+				 		</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+   
 
 <jsp:include page="views/footer.jsp" />

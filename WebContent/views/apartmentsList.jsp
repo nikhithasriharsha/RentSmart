@@ -4,7 +4,7 @@
 
 <jsp:include page="header.jsp" />
 <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+     <section id="portfolio"> 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
