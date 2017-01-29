@@ -30,7 +30,7 @@ public class ApartmentsDao {
 		List<Apartment> apartments = new ArrayList<Apartment>();
 		
 		try{
-			String query = "SELECT * FROM Apartments apt join Apt_Images ai on ai.Img_Id = ( select img.Img_Id from Apt_Images img where img.Apt_Id = apt.Id limit 1)";
+			String query = "SELECT * FROM Apartments apt left outer join Apt_Images ai on ai.Img_Id = ( select img.Img_Id from Apt_Images img where img.Apt_Id = apt.Id limit 1)";
 			if(address != null) {
 				query += "where apt.city= '"+address+"'";
 			}
