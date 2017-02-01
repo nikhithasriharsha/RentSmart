@@ -18,7 +18,7 @@
 							<div class="col-md-8 col-md-offset-2 hero-search">
 								<form method="get" action="search">
 								     <div class="input-group">
-										<input type="text" name="address" class="form-control" placeholder="Search by City or Zipcode....">
+										<input type="text" name="address" class="form-control" placeholder="Search by City....">
 										<span class="input-group-btn">
 					        				<button class="btn btn-default" type="submit"><span class = "glyphicon glyphicon-search" ></span></button>
 					      				</span>

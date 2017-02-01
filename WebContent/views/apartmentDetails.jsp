@@ -21,8 +21,8 @@
                     <table class="table table-hover">
                     <tbody>
                     <tr>
-                    <td>NumofBeds</td>
-                    <td>2</td>
+                    <td>NumOfBeds</td>
+                    <td><c:out value="${apt.Num_Beds}"/></td>
                     </tr>
                     <tr>
                     <td>NumofBaths</td>
