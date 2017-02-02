@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<jsp:include page="header.jsp" />
+<jsp:include page="views/header.jsp" />
 
 <!-- extra CSS to add -->
 <style>
@@ -72,4 +72,4 @@ h2.margin-register {
 		</div>
 	</div>
 </section>
-<jsp:include page="footer.jsp" />
+<jsp:include page="views/footer.jsp" />

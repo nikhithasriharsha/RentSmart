@@ -62,13 +62,13 @@
                     </li>
                     
                     <li class="page-scroll">
-                        <a href="listingApartment.jsp">Manage Listing</a>
+                        <a href="listingApartment.jsp">Add Listing</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="SignUp">Sign Up</a>
+                        <a href="register.jsp">Sign Up</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="Login">Login</a>
+                        <a href="login.jsp">Login</a>
                     </li>
                      
                     	
